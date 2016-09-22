@@ -24,43 +24,43 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LoginLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Timer1
         '
         Me.Timer1.Enabled = True
         '
-        'PictureBox1
+        'LoginLabel
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(541, 361)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.LoginLabel.BackColor = System.Drawing.Color.Transparent
+        Me.LoginLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LoginLabel.ForeColor = System.Drawing.Color.White
+        Me.LoginLabel.Image = Global.风_滤镜.My.Resources.BitmapResource.LoginArea
+        Me.LoginLabel.Location = New System.Drawing.Point(0, 0)
+        Me.LoginLabel.Name = "LoginLabel"
+        Me.LoginLabel.Padding = New System.Windows.Forms.Padding(0, 200, 0, 0)
+        Me.LoginLabel.Size = New System.Drawing.Size(541, 361)
+        Me.LoginLabel.TabIndex = 1
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BackgroundImage = Global.风_滤镜.My.Resources.BitmapResource.Test
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(541, 361)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.LoginLabel)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "匿名者-黑客系统-登录"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-
+    Friend WithEvents LoginLabel As Label
 End Class

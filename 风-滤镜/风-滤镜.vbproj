@@ -105,6 +105,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BitmapResource.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -129,16 +130,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Test-1.jpg" />
+    <None Include="Resources\Test.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Test-2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Test-3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Test-4.jpg" />
+    <None Include="Resources\LoginArea.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
