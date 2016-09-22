@@ -85,7 +85,7 @@
         End If
 
         If I = LastMax Then '表示每个滤镜开始于结束的周期
-            LastMax = VBMath.Rnd * 10 + 2
+            LastMax = VBMath.Rnd * 5 + 2
             I = 0
         Else
             I += 1
@@ -104,5 +104,13 @@ NextBitmap:
         WallpaperIndex = WallpaperIndex Mod WallpaperCount
         WindBitmap = Bitmap.FromFile(WallpaperPath(WallpaperIndex))
         Timer1.Start()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        LoginLabel.Text = TextBox1.Text
+    End Sub
+
+    Private Sub TextBox1_LostFocus(sender As Object, e As EventArgs) Handles TextBox1.LostFocus
+        TextBox1.Focus()
     End Sub
 End Class
