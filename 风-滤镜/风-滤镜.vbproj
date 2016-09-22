@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Wind.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -77,11 +80,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BitmapResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -107,8 +110,8 @@
       <LastGenOutput>BitmapResource.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -134,6 +137,276 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LoginArea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBox_Active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBox_Focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InputBox_Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ring_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Examine_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Earth_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

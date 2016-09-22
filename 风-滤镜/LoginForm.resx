@@ -117,9 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="WindTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="CodeLabel.Text" xml:space="preserve">
+    <value>Private Function WindWave(ByVal BitmapRes As Bitmap, ByVal WaveWidth As Integer, ByVal WaveHeight As Integer, ByVal VolatilityPixel As Integer, ByVal WindRnd As Single) As Bitmap
+        Dim ResultBitmap As Bitmap = BitmapRes.Clone
+        Dim TempBitmap As Bitmap
+        Dim TempRectangle As Rectangle = New Rectangle(0, 0, ResultBitmap.Width, 1)
+        Dim TempWaveHeight As Integer
+        Dim ToRight As Boolean
+        Dim RndPixel As Integer
+        Using TempGraphics As Graphics = Graphics.FromImage(ResultBitmap)
+            For PointY = 0 To ResultBitmap.Height - 1
+                If VBMath.Rnd &gt; WindRnd Then
+                    VBMath.Randomize()
+                    ToRight = (VBMath.Rnd &gt; 0.5)
+                    TempWaveHeight = VBMath.Rnd * WaveHeight
+                    For IndexY = 0 To TempWaveHeight - 1
+                        If (IndexY + PointY &lt; ResultBitmap.Height) Then
+                            RndPixel = Math.Sin(IIf(ToRight, 1, -1) * Math.PI * IndexY / TempWaveHeight) * WaveWidth + VolatilityPixel * VBMath.Rnd
+                            TempRectangle.Y = IndexY + PointY
+                            TempBitmap = ResultBitmap.Clone(TempRectangle, Imaging.PixelFormat.Format32bppArgb)
+                            'TempGraphics.DrawLine(Pens.Gray, 0, IndexY + PointY, ResultBitmap.Width, IndexY + PointY)
+                            TempGraphics.DrawImage(TempBitmap, RndPixel, IndexY + PointY)
+                        End If
+                    Next
+
+                    PointY += TempWaveHeight
+                End If
+            Next
+        End Using
+        Return ResultBitmap
+    End Function
+    
+    Private Function WindLine(ByVal BitmapRes As Bitmap, ByVal Pixel As Integer, ByVal WindRnd As Single) As Bitmap
+        Dim ResultBitmap As Bitmap = BitmapRes.Clone
+        Dim RndPixel As Integer
+        Dim TempBitmap As Bitmap
+        Dim TempRectangle As Rectangle = New Rectangle(0, 0, ResultBitmap.Width, 1)
+        Using TempGraphics As Graphics = Graphics.FromImage(ResultBitmap)
+            For Y As Long = 0 To ResultBitmap.Height - 1
+                If VBMath.Rnd &gt; WindRnd Then
+                    VBMath.Randomize()
+                    RndPixel = VBMath.Rnd * Pixel * 2 - Pixel
+                    TempRectangle.Y = Y
+                    TempBitmap = ResultBitmap.Clone(TempRectangle, Imaging.PixelFormat.Format32bppArgb)
+                    'TempGraphics.DrawLine(Pens.Gray, 0, Y, ResultBitmap.Width, Y)
+                    TempGraphics.DrawImage(TempBitmap, RndPixel, Y)
+                End If
+            Next
+        End Using
+
+        Return ResultBitmap
+    End Function</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>45</value>
   </metadata>
