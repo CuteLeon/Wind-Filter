@@ -68,7 +68,7 @@
         Return ResultBitmap
     End Function
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles WindTimer.Tick
+    Private Sub WindTimer_Tick(sender As Object, e As EventArgs) Handles WindTimer.Tick
         Static WindFlag As Boolean = False
         Static RingIndex As Integer = 0
         Static ExamineIndex As Integer = 0
@@ -93,11 +93,11 @@
                 If VBMath.Rnd > 0.5 Then
                     Me.BackgroundImage = WindLine(My.Resources.BitmapResource.Test, Me.Width * 0.1, VBMath.Rnd / 2 + 0.5)
                 Else
-                    Me.BackgroundImage = WindWave(My.Resources.BitmapResource.Test, Me.Width * 0.1, Me.Height * 0.2, Me.Height * 0.01, VBMath.Rnd / 2 + 0.5)
+                    Me.BackgroundImage = WindWave(My.Resources.BitmapResource.Test, Me.Width * 0.05, Me.Height * 0.1, Me.Height * 0.01, VBMath.Rnd / 2 + 0.5)
                 End If
-                GC.Collect()
             End If
         End If
+        GC.Collect()
     End Sub
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -114,12 +114,13 @@
         LoginPanel.Top = (Me.Height - LoginPanel.Height) / 2
         LoginButton.Left = (LoginPanel.Width - LoginButton.Width) / 2
         LoginButton.Top = (LoginPanel.Height - LoginButton.Height) + 10
-        RingLabel.Left = 30
         RingLabel.Top = Me.Height - RingLabel.Height - 30
-        ExamineLabel.Left = RingLabel.Right + 20
         ExamineLabel.Top = RingLabel.Top
-        EarthLabel.Left = ExamineLabel.Right + 20
         EarthLabel.Top = ExamineLabel.Top
+
+        EarthLabel.Left = Me.Width - EarthLabel.Width - 50
+        ExamineLabel.Left = EarthLabel.Left - ExamineLabel.Width - 20
+        RingLabel.Left = ExamineLabel.Left - RingLabel.Width - 20
     End Sub
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
@@ -152,11 +153,11 @@
 #Region "用户输入数据动态效果"
 
     Private Sub UserDataLabel_MouseEnter(sender As Object, e As EventArgs) Handles UserNameLabel.MouseEnter, PasswordLabel.MouseEnter
-        CType(sender, Label).Image = My.Resources.BitmapResource.InputBox_Active
+        CType(sender, Label).Image = My.Resources.BitmapResource.InputBox_Focus
     End Sub
 
     Private Sub UserDataLabel_MouseLeave(sender As Object, e As EventArgs) Handles UserNameLabel.MouseLeave, PasswordLabel.MouseLeave
-        CType(sender, Label).Image = My.Resources.BitmapResource.InputBox_Normal
+        CType(sender, Label).Image = My.Resources.BitmapResource.ResourceManager.GetObject("InputBox_" & IIf(sender.Equals(ActiveLabel), "Active", "Normal"))
     End Sub
 
     Private Sub UserDataLabel_MouseDown(sender As Object, e As MouseEventArgs) Handles UserNameLabel.MouseDown, PasswordLabel.MouseDown
@@ -165,6 +166,7 @@
 
     Private Sub UserDataLabel_MouseUp(sender As Object, e As MouseEventArgs) Handles UserNameLabel.MouseUp, PasswordLabel.MouseUp
         CType(sender, Label).Image = My.Resources.BitmapResource.InputBox_Focus
+        IIf(sender.Equals(UserNameLabel), PasswordLabel, UserNameLabel).Image = My.Resources.BitmapResource.InputBox_Normal
     End Sub
 #End Region
 

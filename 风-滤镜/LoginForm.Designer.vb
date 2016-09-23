@@ -59,7 +59,7 @@ Partial Class LoginForm
         Me.LoginPanel.Controls.Add(Me.LoginButton)
         Me.LoginPanel.Controls.Add(Me.PasswordLabel)
         Me.LoginPanel.Controls.Add(Me.UserNameLabel)
-        Me.LoginPanel.Location = New System.Drawing.Point(43, 12)
+        Me.LoginPanel.Location = New System.Drawing.Point(90, 0)
         Me.LoginPanel.Name = "LoginPanel"
         Me.LoginPanel.Size = New System.Drawing.Size(360, 360)
         Me.LoginPanel.TabIndex = 3
@@ -92,7 +92,7 @@ Partial Class LoginForm
         '
         Me.UserNameLabel.Font = New System.Drawing.Font("Agency FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserNameLabel.ForeColor = System.Drawing.Color.MediumSpringGreen
-        Me.UserNameLabel.Image = Global.风_滤镜.My.Resources.BitmapResource.InputBox_Focus
+        Me.UserNameLabel.Image = Global.风_滤镜.My.Resources.BitmapResource.InputBox_Active
         Me.UserNameLabel.Location = New System.Drawing.Point(51, 107)
         Me.UserNameLabel.Name = "UserNameLabel"
         Me.UserNameLabel.Size = New System.Drawing.Size(259, 49)
@@ -105,9 +105,9 @@ Partial Class LoginForm
         Me.RingLabel.BackColor = System.Drawing.Color.Transparent
         Me.RingLabel.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RingLabel.ForeColor = System.Drawing.Color.Aqua
-        Me.RingLabel.Location = New System.Drawing.Point(0, 200)
+        Me.RingLabel.Location = New System.Drawing.Point(-1, 291)
         Me.RingLabel.Name = "RingLabel"
-        Me.RingLabel.Size = New System.Drawing.Size(100, 100)
+        Me.RingLabel.Size = New System.Drawing.Size(90, 100)
         Me.RingLabel.TabIndex = 3
         Me.RingLabel.Text = "Connecting ..."
         Me.RingLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -117,9 +117,9 @@ Partial Class LoginForm
         Me.ExamineLabel.BackColor = System.Drawing.Color.Transparent
         Me.ExamineLabel.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExamineLabel.ForeColor = System.Drawing.Color.Aqua
-        Me.ExamineLabel.Location = New System.Drawing.Point(0, 300)
+        Me.ExamineLabel.Location = New System.Drawing.Point(0, 270)
         Me.ExamineLabel.Name = "ExamineLabel"
-        Me.ExamineLabel.Size = New System.Drawing.Size(116, 100)
+        Me.ExamineLabel.Size = New System.Drawing.Size(90, 100)
         Me.ExamineLabel.TabIndex = 4
         Me.ExamineLabel.Text = "Testing ..."
         Me.ExamineLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -129,10 +129,9 @@ Partial Class LoginForm
         Me.EarthLabel.BackColor = System.Drawing.Color.Transparent
         Me.EarthLabel.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EarthLabel.ForeColor = System.Drawing.Color.Aqua
-        Me.EarthLabel.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.EarthLabel.Location = New System.Drawing.Point(370, 254)
+        Me.EarthLabel.Location = New System.Drawing.Point(0, 248)
         Me.EarthLabel.Name = "EarthLabel"
-        Me.EarthLabel.Size = New System.Drawing.Size(120, 100)
+        Me.EarthLabel.Size = New System.Drawing.Size(90, 100)
         Me.EarthLabel.TabIndex = 5
         Me.EarthLabel.Text = "Scaning ..."
         Me.EarthLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -142,7 +141,7 @@ Partial Class LoginForm
         Me.CodeLabel.BackColor = System.Drawing.Color.Transparent
         Me.CodeLabel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CodeLabel.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.CodeLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.CodeLabel.ForeColor = System.Drawing.Color.Green
         Me.CodeLabel.Location = New System.Drawing.Point(0, 0)
         Me.CodeLabel.Name = "CodeLabel"
         Me.CodeLabel.Size = New System.Drawing.Size(450, 400)
